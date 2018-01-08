@@ -19,11 +19,14 @@ Module.register("MMM-EasyPix", {
             this.url = "modules/MMM-EasyPix/pix/" + this.config.picName;
         }
     },
-
+    
+    
+    
     getStyles: function() {
         return ["MMM-EasyPix.css"]
     },
-
+    
+    
     // Override dom generator.
     getDom: function() {
         var wrapper = document.createElement("div");
@@ -33,8 +36,38 @@ Module.register("MMM-EasyPix", {
             image.className = "photo";
 			image.style.maxWidth = this.config.maxWidth;
         }
+        
+        
 
         wrapper.appendChild(image);
+        
         return wrapper;
-    }
+    },
+    
+
+/////  Add this function to the modules you want to control with voice //////
+/////  Must be the same as in "sentences" array in MMM-voice.js /////
+/////  Replace sound file with your own greeting /////
+
+    notificationReceived: function(notification, payload) {
+        if (notification === 'HIDE_LUCY') {
+            this.hide(1000);
+            this.updateDom(300);
+        }  else if (notification === 'SHOW_LUCY') {
+            this.show(1000);
+            this.updateDom(300);
+        }
+        
+        if (notification === 'SHOW_LUCY') {
+            var sound = new Audio();
+            sound.src = 'modules/MMM-EasyPix/sounds/me2.mp3';
+            sound.play();
+        }
+        
+            
+    },
+    
+
 });
+
+
