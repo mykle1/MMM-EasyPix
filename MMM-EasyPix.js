@@ -58,12 +58,20 @@ Module.register("MMM-EasyPix", {
             this.updateDom(300);
         }
         
-        if (notification === 'SHOW_LUCY') {
-            var sound = new Audio();
-            sound.src = 'modules/MMM-EasyPix/sounds/me2.mp3';
-            sound.play();
+  //      if (notification === 'SHOW_LUCY') {
+  //          var sound = new Audio();
+  //          sound.src = 'modules/MMM-EasyPix/sounds/me2.mp3';
+  //          sound.play();
+  //      }
+ ///////// So you don't hear the same greeting every time /////////////////////////       
+////////// Randomize sound files courtesy of @ Cowboysdude ////////////////////////	    
+	   if (notification === 'SHOW_LUCY') {
+            var audio_files = ["1.mp3","11.mp3","me2.mp3"]
+            var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
+            var audio = new Audio(random_file);
+            audio.src = 'modules/MMM-EasyPix/sounds/'+random_file;
+            audio.play();
         }
-        
             
     },
     
