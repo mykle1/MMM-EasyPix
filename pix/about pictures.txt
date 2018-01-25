@@ -1,0 +1,4 @@
+Alternative pictures for use with Hello-Lucy.
+
+Pi users should use static pictures, or small sized gifs.
+Pi users can try eyes.gif or 2.gif 
