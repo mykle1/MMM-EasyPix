@@ -7,8 +7,9 @@
 Module.register("MMM-EasyPix", {
 
     defaults: {
-        picName: "PICTURE_NAME.jpg",   // .jpg, .gif, .png, etc.. (animated gif's too!)
-		maxWidth: "350px",             // your picture files go in "pix" folder of module
+        picName: "face.gif",          // .jpg, .gif, .png, etc.. (animated gif's too!)
+		maxWidth: "100%",             // your picture files go in "pix" folder of module
+		sounds: ["1.mp3", "me2.mp3"]  // mp3 sound file names in quotes seperated by commas
 		},                               
 
     start: function() {
@@ -64,9 +65,9 @@ Module.register("MMM-EasyPix", {
   //          sound.play();
   //      }
  ///////// So you don't hear the same greeting every time /////////////////////////       
-////////// Randomize sound files courtesy of @ Cowboysdude ////////////////////////	    
+////////// Randomized sound files courtesy of @ Cowboysdude ////////////////////////	    
 	   if (notification === 'SHOW_LUCY') {
-            var audio_files = ["1.mp3","11.mp3","me2.mp3"]
+            var audio_files = this.config.sounds;
             var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
             var audio = new Audio(random_file);
             audio.src = 'modules/MMM-EasyPix/sounds/'+random_file;
