@@ -8,6 +8,8 @@ The easiest way to show pictures onto your mirror.
 
 * Your picture files go in the "pix" folder inside the MMM-EasyPix module folder.
 
+## Works with Hello-Lucy voice enhancement (required for sound)
+
 ## Installation
 
 * `git clone https://github.com/mykle1/MMM-EasyPix` into the `~/MagicMirror/modules` directory.
@@ -18,7 +20,7 @@ The easiest way to show pictures onto your mirror.
 
     {
         module: "MMM-EasyPix",
-		position: "top_left",
+		position: "top_center",
 		config: {
 			picName: "Example.jpg", // Enter the picture file name.
 			maxWidth: "75%",        // Size picture precisely. Retains aspect ratio.
