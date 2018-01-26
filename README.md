@@ -21,7 +21,8 @@ The easiest way to show pictures onto your mirror.
 		position: "top_left",
 		config: {
 			picName: "Example.jpg", // Enter the picture file name.
-			maxWidth: "300px",      // Size picture precisely. Retains aspect ratio.
+			maxWidth: "75%",        // Size picture precisely. Retains aspect ratio.
+			sounds: ["1.mp3", "me2.mp3"]  // mp3 sound file names in quotes seperated by commas for Hello-Lucy
 		}
 	},
 	
