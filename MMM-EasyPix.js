@@ -9,15 +9,18 @@ Module.register("MMM-EasyPix", {
     defaults: {
         picName: "face.gif",          // .jpg, .gif, .png, etc.. (animated gif's too!)
 		maxWidth: "100%",             // your picture files go in "pix" folder of module
-		sounds: ["1.mp3", "me2.mp3"]  // mp3 sound file names in quotes seperated by commas
+		sounds: ["1.mp3", "me2.mp3"],  // mp3 sound file names in quotes seperated by commas
+		updateInterval: 60 * 1000,     // updates display
+		animationSpeed: 1000,
 		},                               
 
     start: function() {
         self = this;
-        this.url = '';
-
+        this.url = ''; 
+		this.scheduleUpdate();
         if (this.config.picName != '') {
             this.url = "modules/MMM-EasyPix/pix/" + this.config.picName;
+			 
         }
     },
     
@@ -25,6 +28,14 @@ Module.register("MMM-EasyPix", {
     
     getStyles: function() {
         return ["MMM-EasyPix.css"]
+    },
+		
+	scheduleUpdate: function() {
+        setInterval(() =>  {
+			this.updateDom();  //  this.getDom(); @cbd
+	//		console.log(this.updateDom);    // for checking
+		},
+        this.config.updateInterval);
     },
     
     
@@ -52,11 +63,9 @@ Module.register("MMM-EasyPix", {
 
     notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_LUCY') {
-            this.hide(1000);
-            this.updateDom(300);
+            this.hide(500);
         }  else if (notification === 'SHOW_LUCY') {
             this.show(1000);
-            this.updateDom(300);
         }
         
   //      if (notification === 'SHOW_LUCY') {
