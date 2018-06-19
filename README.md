@@ -22,7 +22,7 @@ The easiest way to show pictures onto your mirror.
         module: "MMM-EasyPix",
 		position: "top_center",
 		config: {
-			picName: "Example.jpg", // Enter the picture file name.
+			picName: "18.jpg", // Enter the picture file name.
 			maxWidth: "75%",        // Size picture precisely. Retains aspect ratio.
 			sounds: ["1.mp3", "me2.mp3"]  // mp3 sound file names in quotes seperated by commas for Hello-Lucy
 		}
