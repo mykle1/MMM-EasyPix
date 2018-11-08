@@ -25,6 +25,8 @@ The easiest way to show pictures onto your mirror.
 			picName: "18.jpg", // Enter the picture file name.
 			maxWidth: "75%",        // Size picture precisely. Retains aspect ratio.
 			sounds: ["1.mp3", "me2.mp3"]  // mp3 sound file names in quotes seperated by commas for Hello-Lucy
+			updateInterval: 30 * 60 * 1000,     // updates display
+		        animationSpeed: 3000,
 		}
 	},
 	
