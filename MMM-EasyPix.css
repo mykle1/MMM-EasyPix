@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+
 /* Copy and paste any or all of these css entries into your custom.css file inside your
  * css folder. The functions are annotated to make things as easy as possible for you.
  * 
@@ -5,11 +7,10 @@
  * You can even use a direct internet url to an image
  */
 
-
-.MMM-EasyPix .photo {
-  margin-right: -1px;        /* Move your picture using these */
-  margin-left: -1px;         /* Move your picture using these */
-  margin-top: -1px;          /* Move your picture using these */
-  margin-bottom: -1px;       /* Move your picture using these */
-  float: center;               /* Left, center or right */
+.mmm-easypix-photo {
+  margin-right: -1px; /* Move your picture using these */
+  margin-left: -1px; /* Move your picture using these */
+  margin-top: -1px; /* Move your picture using these */
+  margin-bottom: -1px; /* Move your picture using these */
+  float: center; /* Left, center or right */
 }
