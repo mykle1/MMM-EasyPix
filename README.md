@@ -16,7 +16,7 @@ Pi users should use static pictures or small sized gifs. They can try `eyes.gif`
 
 ## Installation
 
-- `git clone https://github.com/mykle1/MMM-EasyPix` into the `~/MagicMirror/modules` directory.
+- `git clone https://github.com/KristjanESPERANTO/MMM-EasyPix` into the `~/MagicMirror/modules` directory.
 - Annotated .css file included for exact positioning.
 
 ## config.js entry and options
@@ -42,3 +42,7 @@ Pi users should use static pictures or small sized gifs. They can try `eyes.gif`
 ## Remember
 
 - All picture files go in the "pix" folder inside the MMM-EasyPix module folder.
+
+## Project status
+
+Since the original author of the module, [mykle1](https://github.com/mykle1), is no longer active, I forked the module. I fixed a few issues and will try to keep the module working in the future.
